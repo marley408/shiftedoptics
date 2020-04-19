@@ -3,13 +3,13 @@ import React from "react"
 import PrimaryHero from "../components/hero/PrimaryHero"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Contact from '../components/contact/Contact'
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <PrimaryHero />
-    <h1>Hi people</h1>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Contact />
   </Layout>
 )
 
