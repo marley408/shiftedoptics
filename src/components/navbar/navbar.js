@@ -23,7 +23,8 @@ function Navbar() {
     ].map((anchor, index) => {
       return (
         <li
-          className={open && "navLinkFade"}
+          key={anchor.text}
+          className={open ? "navLinkFade" : undefined}
           style={{
             animationDelay: `${index / 7}s`,
           }}
@@ -45,11 +46,11 @@ function Navbar() {
       >
         {buildAnchors()}
       </ul>
-      <div className="burger" onClick={handleBurgerClick}>
-        <div className="lin1e"></div>
-        <div className="line2"></div>
-        <div className="line3"></div>
-      </div>
+      <button className="burger" onClick={handleBurgerClick}>
+        <span className="lin1e"></span>
+        <span className="line2"></span>
+        <span className="line3"></span>
+      </button>
     </nav>
   )
 }
