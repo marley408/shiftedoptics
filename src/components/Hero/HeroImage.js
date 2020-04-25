@@ -2,24 +2,24 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import React from "react"
 
-export default () => {
+function HeroImage() {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "youtube-gray.png" }) {
+      file(relativePath: { eq: "hero@3x.png" }) {
         childImageSharp {
           # Specify a fixed image and fragment.
           # The default width is 400 pixels
-          fixed(width: 34, height: 34, quality: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(quality: 90) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `)
+
   return (
-    <Img
-      fixed={data.file.childImageSharp.fixed}
-      alt="Gatsby Docs are awesome"
-    />
+    <Img fluid={data.file.childImageSharp.fluid} style={{ minHeight: 600 }} />
   )
 }
+
+export default HeroImage

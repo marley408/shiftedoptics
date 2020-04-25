@@ -41,24 +41,6 @@
   transform: translate3d(4px, 0, 0);
 }
 
-.underline {
-  position: relative;
-  z-index: 1;
-}
-
-.underline:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-color: #e988ee;
-  z-index: -1;
-  right: 0;
-  top: 20px;
-  transform: rotate(-1deg);
-  opacity: 0.75;
-}
-
 @media only screen and (min-width: 480px) {
   .contact li:not(:last-of-type) {
     margin-right: 3em;
