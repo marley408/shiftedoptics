@@ -9,7 +9,7 @@ export default () => {
         childImageSharp {
           # Specify a fixed image and fragment.
           # The default width is 400 pixels
-          fixed(width: 34, height: 34) {
+          fixed(width: 34, height: 34, quality: 100) {
             ...GatsbyImageSharpFixed
           }
         }
