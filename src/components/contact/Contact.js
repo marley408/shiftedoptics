@@ -1,4 +1,5 @@
 import React from "react"
+import Underline from "../underline/Underline"
 import "./Contact.css"
 import InstagramIcon from "./Instagram"
 import MailIcon from "./Mail"
@@ -7,7 +8,7 @@ const Contact = () => {
   return (
     <div className="contact">
       <h2>
-        <span className="underline">Want to work with us?</span>
+        <Underline>Want to work with us?</Underline>
       </h2>
       <ul>
         <li>
