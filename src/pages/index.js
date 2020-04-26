@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import React from "react"
 import PrimaryHero from "../components/hero/PrimaryHero"
 import Layout from "../components/layout"
