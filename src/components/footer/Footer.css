@@ -1,0 +1,25 @@
+footer {
+  background-color: #f9f9f9;
+  color: #727275;
+  padding: 2.25em 1em;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer a {
+  color: inherit;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer li {
+  display: inline-flex;
+}
+
+footer li:not(:last-of-type) {
+  margin-right: 1em;
+}
