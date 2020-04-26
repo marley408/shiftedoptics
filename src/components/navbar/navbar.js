@@ -11,7 +11,7 @@ function Navbar() {
 
   // We can use state to manipulate the appearance of nav links
   // This function is attached to the onClick property on the burger element
-  const handleBurgerClick = e => setOpen(!open)
+  const handleBurgerClick = (e) => setOpen(!open)
 
   // Just a function that returns a list of <li></li> elements
   // This is also where we attach the animation which was moved into a CSS class
@@ -47,9 +47,7 @@ function Navbar() {
         {buildAnchors()}
       </ul>
       <button className="burger" onClick={handleBurgerClick}>
-        <span className="lin1e"></span>
-        <span className="line2"></span>
-        <span className="line3"></span>
+        Menu
       </button>
     </nav>
   )
