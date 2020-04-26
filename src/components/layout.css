@@ -9,6 +9,7 @@ html {
   -webkit-font-smoothing: antialiased;
   font-size: 100%;
   text-rendering: optimizeLegibility;
+  box-sizing: border-box;
 }
 
 *,
