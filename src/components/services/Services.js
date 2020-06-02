@@ -8,7 +8,7 @@ import ApertureIcon from "./ApertureIcon"
 
 const Services = () => {
   return (
-    <div>
+    <div style={{ paddingTop: "2.25em" }}>
       <CardList>
         <div>
           <h2 style={{ marginTop: "0" }}>
