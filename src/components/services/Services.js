@@ -22,17 +22,17 @@ const Services = () => {
 
         <Card>
           <DroneIcon />
-          <h3 style={{ margin: "0.25em 0" }}>Drone</h3>
+          <h3>Drone</h3>
           <p>Capture more than what's in front of the camera.</p>
         </Card>
         <Card>
           <VideoIcon />
-          <h3 style={{ margin: "0.25em 0" }}>Video</h3>
+          <h3>Video</h3>
           <p>4k footage gets you beyond static storytelling.</p>
         </Card>
         <Card>
           <ApertureIcon />
-          <h3 style={{ margin: "0.25em 0" }}>Photo</h3>
+          <h3>Photo</h3>
           <p>Framable, printable, and sharable but higher quality.</p>
         </Card>
       </CardList>
