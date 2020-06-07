@@ -1,10 +1,10 @@
 import React from "react"
+import Card from "../card/Card"
 import CardList from "../card/CardList"
 import Underline from "../underline/Underline"
-import Card from "../card/Card"
+import ApertureIcon from "./ApertureIcon"
 import DroneIcon from "./DroneIcon"
 import VideoIcon from "./VideoIcon"
-import ApertureIcon from "./ApertureIcon"
 
 const Services = () => {
   return (
@@ -12,24 +12,23 @@ const Services = () => {
       <CardList>
         <div>
           <h2 style={{ marginTop: "0" }}>
-            <Underline>Our Services</Underline>
+            <Underline>Services</Underline>
           </h2>
           <p style={{ color: "#727275" }}>
-            We love to share stories. With our equipment and expertise, we’re
-            able to provide 4K content to help you tell your story on any
-            platform. 
+            Services from a bonafide car enthusiast with a creative eye, and 4k
+            equipment include drone work, videography, and photography.
           </p>
         </div>
 
         <Card>
           <DroneIcon />
           <h3 style={{ margin: "0.25em 0" }}>Drone</h3>
-          <p>Expand your point of view with aerial footage.</p>
+          <p>Capture more than what's in front of the camera.</p>
         </Card>
         <Card>
           <VideoIcon />
           <h3 style={{ margin: "0.25em 0" }}>Video</h3>
-          <p>Move beyond static story telling with 4k footage.</p>
+          <p>4k footage gets you beyond static storytelling.</p>
         </Card>
         <Card>
           <ApertureIcon />

@@ -41,7 +41,7 @@ const MoreLink = styled(Link)`
   align-items: center;
   color: inherit;
   text-decoration: none;
-  transition: box-shadow 250ms ease-in-out;
+  transition: box-shadow 200ms ease-in-out;
   &:hover,
   &:focus {
     box-shadow: 0 2px 0 0 var(--purple);
