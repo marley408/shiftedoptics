@@ -9,12 +9,12 @@ import PropTypes from "prop-types"
 import React from "react"
 import Footer from "./footer/Footer"
 import "./layout.css"
-import NavBar from "./navbar/NavBar"
+import NavigationBar from "./navbar/NavigationBar"
 
 const Layout = ({ children }) => {
   return (
     <>
-      <NavBar />
+      <NavigationBar />
       <div>
         <main>{children}</main>
         <Footer />
