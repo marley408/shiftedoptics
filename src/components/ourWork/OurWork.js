@@ -1,10 +1,12 @@
+import { Link } from "gatsby"
 import React from "react"
+import styled from "styled-components"
+import Icon from "../icons/Icon"
 import Underline from "../underline/Underline"
 import FeaturedFocus from "./FeaturedFocus"
 import FeaturedSubieExterior from "./FeaturedSubieExterior"
 import FeaturedSubieInterior from "./FeaturedSubieInterior"
-import styled from "styled-components"
-import { Link } from "gatsby"
+
 const Section = styled.section`
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 767px));
@@ -34,6 +36,25 @@ const Wrapper = styled.div`
   }
 `
 
+const MoreLink = styled(Link)`
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  transition: box-shadow 250ms ease-in-out;
+  &:hover,
+  &:focus {
+    box-shadow: 0 2px 0 0 var(--purple);
+    svg {
+      transform: translate3d(0.25em, 0, 0);
+    }
+  }
+  svg {
+    transition: transform 250ms ease-in-out;
+    margin-left: 0.25em;
+  }
+`
+
 const OurWork = () => {
   return (
     <Wrapper>
@@ -52,7 +73,10 @@ const OurWork = () => {
         </div>
       </Section>
       <p>
-        <Link to="/">View More</Link>
+        <MoreLink to="/photos">
+          <span>View More</span>
+          <Icon name="arrow-right" aria-hidden="true" focusable="false" />
+        </MoreLink>
       </p>
     </Wrapper>
   )

@@ -1,6 +1,6 @@
 import React from "react"
 
-function Icon({ name }) {
+function Icon({ name, ...rest }) {
   switch (name) {
     case "youtube":
       return (
@@ -9,6 +9,7 @@ function Icon({ name }) {
           height="24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          {...rest}
         >
           <g
             clipPath="url(#clip0)"
@@ -34,6 +35,7 @@ function Icon({ name }) {
           height="24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          {...rest}
         >
           <path
             d="M17.17 2h-10a5 5 0 0 0-5 5v10a5 5 0 0 0 5 5h10a5 5 0 0 0 5-5V7a5 5 0 0 0-5-5z"
@@ -44,6 +46,25 @@ function Icon({ name }) {
           />
           <path
             d="M16.17 11.37a4 4 0 1 1-7.913 1.174 4 4 0 0 1 7.914-1.174zm1.5-4.87h.01"
+            stroke="#06052B"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      )
+
+    case "arrow-right":
+      return (
+        <svg
+          width="24"
+          height="24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          {...rest}
+        >
+          <path
+            d="M5 12h14m-7-7l7 7-7 7"
             stroke="#06052B"
             strokeWidth="2"
             strokeLinecap="round"
