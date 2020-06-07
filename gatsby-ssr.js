@@ -4,4 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
 
-// You can delete this file if you're not using it
+import BreakpointProvider from "./src/components/contexts/BreakpointContext"
+
+export const wrapRootElement = BreakpointProvider
