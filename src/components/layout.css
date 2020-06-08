@@ -6,7 +6,8 @@
 }
 
 :focus {
-  outline: 2px solid var(--purple);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--white), 0 0 0 4px var(--purple);
 }
 
 html {
