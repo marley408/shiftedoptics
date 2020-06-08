@@ -14,7 +14,7 @@ const Contact = () => {
         <li>
           <MailIcon />
           <span>
-            <a href="mailto:shiftedoptics08@gmail.com">Send us an email</a>
+            <a href="mailto:shiftedoptics08@gmail.com">Send me an email</a>
           </span>
         </li>
         <li>
@@ -25,7 +25,7 @@ const Contact = () => {
               target="_blank"
               rel="noreferrer noopener"
             >
-              DM us on Instagram
+              Message me on Instagram
             </a>
           </span>
         </li>
