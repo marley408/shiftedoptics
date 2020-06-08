@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Underline from "../underline/Underline"
 
 const Section = styled.section`
-  padding: 2.25em 1em;
+  padding: 4.25em 1em;
   text-align: center;
   background-color: var(--white);
   h1 {
