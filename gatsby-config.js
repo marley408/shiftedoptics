@@ -1,7 +1,11 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Shifted Optics`,
-    description: `Dedicated to creating unqiue, focused, and compelling content.`,
+    description: `Dedicated to creating unique, focused, and compelling content.`,
     author: `@codewithwes`,
   },
   plugins: [
@@ -33,6 +37,15 @@ module.exports = {
       options: {
         key: "portal",
         id: "portal",
+      },
+    },
+    {
+      resolve: `gatsby-source-dropbox`,
+      options: {
+        accessToken: process.env.DROPBOX_ACCESS_TOKEN,
+        extensions: [".jpg", ".JPG", ".png"],
+        recursive: false,
+        createFolderNodes: true,
       },
     },
   ],
