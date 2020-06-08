@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import Logo from "../logo/logo"
@@ -15,7 +16,9 @@ const Header = styled.header`
 function NavBar() {
   return (
     <Header>
-      <Logo />
+      <Link to="/" aria-label="Go to home page">
+        <Logo />
+      </Link>
       <Nav />
       <NavToggle />
     </Header>

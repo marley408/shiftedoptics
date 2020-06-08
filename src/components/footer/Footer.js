@@ -35,7 +35,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Matthew{" "}
+          Matthew
         </a>{" "}
         &amp; Wesley Chang.
       </p>
