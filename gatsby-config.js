@@ -43,7 +43,7 @@ module.exports = {
       resolve: `gatsby-source-dropbox`,
       options: {
         accessToken: process.env.DROPBOX_ACCESS_TOKEN,
-        extensions: [".jpg", ".JPG", ".png"],
+        extensions: [".jpg", ".png", ".JPG"],
         recursive: false,
         createFolderNodes: true,
       },
