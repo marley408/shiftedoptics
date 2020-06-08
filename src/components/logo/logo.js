@@ -9,7 +9,7 @@ export default () => {
         childImageSharp {
           # Specify a fixed image and fragment.
           # The default width is 400 pixels
-          fixed(width: 200) {
+          fixed(width: 200, quality: 100) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -19,7 +19,8 @@ export default () => {
   return (
     <Img
       fixed={data.file.childImageSharp.fixed}
-      alt="Gatsby Docs are awesome"
+      alt="Shifted Optics logo"
+      style={{ display: "block" }}
     />
   )
 }

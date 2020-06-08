@@ -2,6 +2,11 @@
   --black: #06052b;
   --white: #f9f9f9;
   --pure-white: #fff;
+  --purple: #e9a8ee;
+}
+
+:focus {
+  outline: 2px solid var(--purple);
 }
 
 html {
@@ -83,11 +88,5 @@ small {
 @media only screen and (min-width: 48em) {
   html {
     font-size: 112.5%;
-  }
-}
-
-@media only screen and (min-width: 64em) {
-  html {
-    font-size: 125%;
   }
 }
