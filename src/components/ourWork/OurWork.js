@@ -3,6 +3,7 @@ import React from "react"
 import styled from "styled-components"
 import Icon from "../icons/Icon"
 import Underline from "../underline/Underline"
+import { Wrapper } from "../wrapper/Wrapper"
 import FeaturedFocus from "./FeaturedFocus"
 import FeaturedSubieExterior from "./FeaturedSubieExterior"
 import FeaturedSubieInterior from "./FeaturedSubieInterior"
@@ -24,8 +25,7 @@ const Title = styled.h2`
   text-align: center;
   margin-bottom: 2em;
 `
-const Wrapper = styled.div`
-  padding: 2.25em 1em 0;
+const GridWrapper = styled(Wrapper)`
   max-width: 767px;
   width: 100%;
   margin: 0 auto;
@@ -39,12 +39,8 @@ const Wrapper = styled.div`
 const MoreLink = styled(Link)`
   display: inline-flex;
   align-items: center;
-  color: inherit;
-  text-decoration: none;
-  transition: box-shadow 200ms ease-in-out;
   &:hover,
   &:focus {
-    box-shadow: 0 2px 0 0 var(--purple);
     svg {
       transform: translate3d(0.25em, 0, 0);
     }
@@ -57,7 +53,7 @@ const MoreLink = styled(Link)`
 
 const OurWork = () => {
   return (
-    <Wrapper>
+    <GridWrapper>
       <Title>
         <Underline>Our Work</Underline>
       </Title>
@@ -78,7 +74,7 @@ const OurWork = () => {
           <Icon name="arrow-right" aria-hidden="true" focusable="false" />
         </MoreLink>
       </p>
-    </Wrapper>
+    </GridWrapper>
   )
 }
 

@@ -13,12 +13,19 @@ const Header = styled.header`
   padding: 1em;
 `
 
+const LogoLink = styled(Link)`
+  &:hover,
+  &:focus {
+    box-shadow: none;
+  }
+`
+
 function NavBar() {
   return (
     <Header>
-      <Link to="/" aria-label="Go to home page">
+      <LogoLink to="/" aria-label="Go to home page">
         <Logo />
-      </Link>
+      </LogoLink>
       <Nav />
       <NavToggle />
     </Header>

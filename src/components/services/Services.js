@@ -1,19 +1,29 @@
 import React from "react"
+import styled from "styled-components"
 import Card from "../card/Card"
 import CardList from "../card/CardList"
 import Underline from "../underline/Underline"
+import { Wrapper } from "../wrapper/Wrapper"
 import ApertureIcon from "./ApertureIcon"
 import DroneIcon from "./DroneIcon"
 import VideoIcon from "./VideoIcon"
 
+const Title = styled.h1`
+  margin-top: 0;
+`
+
+const GridWrapper = styled(Wrapper)`
+  padding-top: 4.5em;
+`
+
 const Services = () => {
   return (
-    <div style={{ paddingTop: "2.25em" }}>
+    <GridWrapper>
       <CardList>
         <div>
-          <h2 style={{ marginTop: "0" }}>
+          <Title className="like-h2">
             <Underline>Services</Underline>
-          </h2>
+          </Title>
           <p style={{ color: "#727275" }}>
             Services from a bonafide car enthusiast with a creative eye, and 4k
             equipment include drone work, videography, and photography.
@@ -36,7 +46,7 @@ const Services = () => {
           <p>Framable, printable, and sharable but higher quality.</p>
         </Card>
       </CardList>
-    </div>
+    </GridWrapper>
   )
 }
 

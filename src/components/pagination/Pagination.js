@@ -22,6 +22,9 @@ const PaginationItem = styled.li`
     border: 1px solid #d2d3d2;
     color: inherit;
     text-decoration: none;
+    &:hover {
+      box-shadow: none;
+    }
     &:hover,
     &:focus {
       background-color: var(--white);

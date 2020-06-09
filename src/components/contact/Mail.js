@@ -16,10 +16,5 @@ export default () => {
       }
     }
   `)
-  return (
-    <Img
-      fixed={data.file.childImageSharp.fixed}
-      alt="Gatsby Docs are awesome"
-    />
-  )
+  return <Img fixed={data.file.childImageSharp.fixed} alt="Email icon" />
 }

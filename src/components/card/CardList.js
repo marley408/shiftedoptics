@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 const CardList = styled.div`
-  padding: 2.25em 1em;
   max-width: 1440px;
   margin: 0 auto;
   display: block;
