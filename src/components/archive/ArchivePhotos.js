@@ -22,19 +22,19 @@ const Grid = styled.div`
 
 function ArchivePhotos({ data, pageContext }) {
   const getArchiveItems = (query) => {
-    return query.nodes.map((node) => (
+    return query.edges.map(({ node }) => (
       <ArchivePhoto
         key={node.id}
-        fluid={node.localFile.childImageSharp.fluid}
-        alt={node.localFile.name}
+        fluid={node.mainImage.asset.fluid}
+        alt={node.title}
       />
     ))
   }
 
-  const { allDropboxImage } = data
+  const { allSanityPost } = data
   return (
     <Wrapper>
-      <Grid>{getArchiveItems(allDropboxImage)}</Grid>
+      <Grid>{getArchiveItems(allSanityPost)}</Grid>
       <Pagination {...pageContext} />
     </Wrapper>
   )
@@ -42,8 +42,8 @@ function ArchivePhotos({ data, pageContext }) {
 
 ArchivePhotos.propTypes = {
   data: PropTypes.shape({
-    allDropboxImage: PropTypes.shape({
-      nodes: PropTypes.array.isRequired,
+    allSanityPost: PropTypes.shape({
+      edges: PropTypes.array.isRequired,
     }).isRequired,
   }).isRequired,
   pageContext: PropTypes.object.isRequired,

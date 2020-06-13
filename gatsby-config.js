@@ -2,6 +2,8 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const isProd = process.env.NODE_ENV === "production"
+
 module.exports = {
   siteMetadata: {
     title: `Shifted Optics`,
@@ -40,12 +42,13 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-dropbox`,
+      resolve: `gatsby-source-sanity`,
       options: {
-        accessToken: process.env.DROPBOX_ACCESS_TOKEN,
-        extensions: [".jpg", ".png", ".JPG"],
-        recursive: false,
-        createFolderNodes: true,
+        projectId: `gvwtr45q`,
+        dataset: `production`,
+        token: process.env.SANITY_TOKEN,
+        graphqlTag: `default`,
+        watchMode: !isProd,
       },
     },
   ],

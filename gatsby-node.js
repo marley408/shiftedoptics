@@ -7,14 +7,15 @@
 // You can delete this file if you're not using it
 const path = require("path")
 
-exports.createPages = async ({ graphql, actions, reporter }) => {
+async function createPhotosArchive(graphql, actions, reporter) {
   const { createPage } = actions
-
   const result = await graphql(`
     {
-      allDropboxImage(sort: { order: ASC, fields: lastModified }) {
-        nodes {
-          id
+      allSanityPost(sort: { fields: _createdAt, order: DESC }) {
+        edges {
+          node {
+            id
+          }
         }
       }
     }
@@ -25,7 +26,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const posts = result.data.allDropboxImage.nodes
+  const posts = (result.data.allSanityPost || {}).edges || []
   const postsPerPage = 6
   const numPages = Math.ceil(posts.length / postsPerPage)
   const hasNextPage = posts.length > postsPerPage
@@ -46,4 +47,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       },
     })
   })
+}
+
+exports.createPages = async ({ graphql, actions, reporter }) => {
+  await createPhotosArchive(graphql, actions, reporter)
 }

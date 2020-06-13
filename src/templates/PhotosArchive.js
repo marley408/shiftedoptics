@@ -21,22 +21,23 @@ const PhotosArchive = (props) => {
 
 export const PHOTOS_QUERY = graphql`
   query GetPhotos($skip: Int!, $limit: Int!) {
-    allDropboxImage(
-      sort: { order: ASC, fields: lastModified }
+    allSanityPost(
+      sort: { fields: _createdAt, order: DESC }
       limit: $limit
       skip: $skip
     ) {
-      totalCount
-      nodes {
-        localFile {
-          childImageSharp {
-            fluid(maxWidth: 373, quality: 100) {
-              ...GatsbyImageSharpFluid
+      edges {
+        node {
+          title
+          id
+          mainImage {
+            asset {
+              fluid(maxWidth: 373) {
+                ...GatsbySanityImageFluid
+              }
             }
           }
-          name
         }
-        id
       }
     }
   }
