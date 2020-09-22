@@ -91,7 +91,7 @@ function Pagination({ currentPage, numPages, hasNextPage, pagePath }) {
     )
   }
 
-  return !isLast && <PaginationList>{composePaginatedItems()}</PaginationList>
+  return <PaginationList>{composePaginatedItems()}</PaginationList>
 }
 
 export default Pagination
