@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import React from "react"
+import { FiInstagram, FiYoutube } from "react-icons/fi"
 import styled from "styled-components"
-import Icon from "../icons/Icon"
 import NavMenu from "./NavMenu"
 
 const Container = styled.nav`
@@ -44,7 +44,7 @@ function Nav() {
             ariaLabel: "Visit the Shifted Optics YouTube channel.",
             component: ({ ariaLabel, to }) => (
               <a href={to} aria-label={ariaLabel}>
-                <Icon name="youtube" />
+                <FiYoutube size={24} color="currentColor" />
               </a>
             ),
             to: "https://www.youtube.com/channel/UCWlvFe9d0YZhunGxOw17W4g",
@@ -53,7 +53,7 @@ function Nav() {
             ariaLabel: "Visit the Shifted Optics Instagram page.",
             component: ({ ariaLabel, to }) => (
               <a href={to} aria-label={ariaLabel}>
-                <Icon name="instagram" />
+                <FiInstagram size={24} color="currentColor" />
               </a>
             ),
             to: "https://www.instagram.com/shiftedoptics/",

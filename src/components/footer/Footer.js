@@ -1,7 +1,6 @@
 import React from "react"
+import { FiInstagram, FiYoutube } from "react-icons/fi"
 import "./Footer.css"
-import GrayInstagram from "./GrayInstagram"
-import GrayYoutube from "./GrayYoutube"
 
 const Footer = () => {
   return (
@@ -14,7 +13,7 @@ const Footer = () => {
             rel="noreferrer noopener"
             title="Shifted Optics Instagram"
           >
-            <GrayInstagram />
+            <FiInstagram size={34} color="currentColor" />
           </a>
         </li>
         <li>
@@ -24,7 +23,7 @@ const Footer = () => {
             rel="noreferrer noopener"
             title="Shifted Optics YouTube Channel"
           >
-            <GrayYoutube />
+            <FiYoutube size={34} color="currentColor" />
           </a>
         </li>
       </ul>

@@ -1,12 +1,12 @@
 import React from "react"
 
-function Icon({ name, ...rest }) {
+function Icon({ name, size, ...rest }) {
   switch (name) {
     case "youtube":
       return (
         <svg
-          width="25"
-          height="24"
+          width={size}
+          height={size}
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           {...rest}
@@ -31,8 +31,8 @@ function Icon({ name, ...rest }) {
     case "instagram":
       return (
         <svg
-          width="25"
-          height="24"
+          width={size}
+          height={size}
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           {...rest}
@@ -57,8 +57,8 @@ function Icon({ name, ...rest }) {
     case "arrow-right":
       return (
         <svg
-          width="24"
-          height="24"
+          width={size}
+          height={size}
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           {...rest}
@@ -76,6 +76,10 @@ function Icon({ name, ...rest }) {
     default:
       return
   }
+}
+
+Icon.defaultProps = {
+  size: "25",
 }
 
 export default Icon

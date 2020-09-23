@@ -1,13 +1,12 @@
 import { Link } from "gatsby"
 import React from "react"
+import { FiArrowRight } from "react-icons/fi"
 import styled from "styled-components"
-import Icon from "../icons/Icon"
 import Underline from "../underline/Underline"
 import { Wrapper } from "../wrapper/Wrapper"
 import FeaturedFocus from "./FeaturedFocus"
 import FeaturedSubieExterior from "./FeaturedSubieExterior"
 import FeaturedSubieInterior from "./FeaturedSubieInterior"
-
 const Section = styled.section`
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 767px));
@@ -71,7 +70,7 @@ const OurWork = () => {
       <p>
         <MoreLink to="/photos">
           <span>View More</span>
-          <Icon name="arrow-right" aria-hidden="true" focusable="false" />
+          <FiArrowRight size={28} color="currentColor" />
         </MoreLink>
       </p>
     </GridWrapper>

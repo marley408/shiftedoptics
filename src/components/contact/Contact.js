@@ -1,8 +1,7 @@
 import React from "react"
+import { FiInstagram, FiMail } from "react-icons/fi"
 import styled from "styled-components"
 import Underline from "../underline/Underline"
-import InstagramIcon from "./Instagram"
-import MailIcon from "./Mail"
 
 const Wrapper = styled.section`
   padding: 2.25em 1em;
@@ -30,7 +29,7 @@ const ListItem = styled.li`
     margin-bottom: 2em;
   }
 
-  > div {
+  > svg {
     margin-right: 0.5em;
     display: block;
   }
@@ -54,13 +53,13 @@ const Contact = () => {
       </Title>
       <List>
         <ListItem>
-          <MailIcon />
+          <FiInstagram size={34} color="currentColor" />
           <span>
             <a href="mailto:shiftedoptics08@gmail.com">Send me an email</a>
           </span>
         </ListItem>
         <ListItem>
-          <InstagramIcon />
+          <FiMail size={34} color="currentColor" />
           <span>
             <a
               href="https://www.instagram.com/shiftedoptics/"
