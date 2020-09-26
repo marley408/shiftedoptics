@@ -32,7 +32,7 @@ export const PHOTOS_QUERY = graphql`
           id
           mainImage {
             asset {
-              fluid(maxWidth: 373) {
+              fluid(maxWidth: 373, toFormat: WEBP) {
                 ...GatsbySanityImageFluid
               }
             }

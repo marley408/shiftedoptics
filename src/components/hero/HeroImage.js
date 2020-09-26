@@ -9,7 +9,7 @@ function HeroImage() {
         childImageSharp {
           # Specify a fixed image and fragment.
           # The default width is 400 pixels
-          fluid(quality: 95) {
+          fluid(quality: 95, toFormat: WEBP) {
             ...GatsbyImageSharpFluid
           }
         }

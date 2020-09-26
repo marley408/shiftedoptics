@@ -9,7 +9,7 @@ export default () => {
         childImageSharp {
           # Specify a fixed image and fragment.
           # The default width is 400 pixels
-          fixed(width: 200, quality: 100) {
+          fixed(width: 200, quality: 100, toFormat: WEBP) {
             ...GatsbyImageSharpFixed
           }
         }

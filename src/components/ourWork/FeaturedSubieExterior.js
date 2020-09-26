@@ -8,7 +8,7 @@ export default () => {
       file(relativePath: { eq: "featured-subie-exterior.png" }) {
         childImageSharp {
           # Specify a fixed image and fragment.
-          fluid(quality: 100) {
+          fluid(quality: 100, toFormat: WEBP) {
             ...GatsbyImageSharpFluid
           }
         }
