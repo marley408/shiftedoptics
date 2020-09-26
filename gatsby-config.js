@@ -51,5 +51,12 @@ module.exports = {
         watchMode: !isProd,
       },
     },
+    {
+      resolve: `gatsby-source-youtube-v2`,
+      options: {
+        channelId: ["UCWlvFe9d0YZhunGxOw17W4g"],
+        apiKey: process.env.GOOGLE_API_KEY,
+      },
+    },
   ],
 }
