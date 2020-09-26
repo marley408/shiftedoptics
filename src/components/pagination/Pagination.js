@@ -91,7 +91,11 @@ function Pagination({ currentPage, numPages, hasNextPage, pagePath }) {
     )
   }
 
-  return <PaginationList>{composePaginatedItems()}</PaginationList>
+  return (
+    <nav aria-label="Pagination navigation">
+      <PaginationList>{composePaginatedItems()}</PaginationList>
+    </nav>
+  )
 }
 
 export default Pagination
