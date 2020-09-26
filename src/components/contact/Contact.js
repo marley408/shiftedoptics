@@ -53,13 +53,13 @@ const Contact = () => {
       </Title>
       <List>
         <ListItem>
-          <FiInstagram size={34} color="currentColor" />
+          <FiMail size={34} color="currentColor" />
           <span>
             <a href="mailto:shiftedoptics08@gmail.com">Send me an email</a>
           </span>
         </ListItem>
         <ListItem>
-          <FiMail size={34} color="currentColor" />
+          <FiInstagram size={34} color="currentColor" />
           <span>
             <a
               href="https://www.instagram.com/shiftedoptics/"
